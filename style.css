@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
+
+
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+background-image: linear-gradient(120deg,rgb(32, 156, 1), #ff427b);
+color: white;
+font-family: 'Bad Script', cursive;
+min-height: 100vh;
+place-items: center;
+}
+
+header, form {
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+form input, form button {
+    padding: 20px;
+    font-size: 30px;
+    border: none;
+    background: white;
+    color:rgb(32, 156, 1)
+}
+
+form button {
+    color: rgb(32, 156, 1);
+    cursor: pointer;
+    transition: all 0.3 ease 
+}
+
+form button:hover {
+    background: #ff427b;
+    color: rgb(32, 156, 1)
+}
+
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list {
+    min-width: 36%;
+    list-style: none;
+}
+
+.todo {
+    margin: 20px;
+    background: white;
+    color:rgb(32, 156, 1);
+    font-size: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+
+.todo li {
+    flex: 1;
+}
+
+.todo-item {
+   padding: 40px 20px;
+
+}
+
+.garbage-btn, .checkMark-btn {
+    background: white;
+    color: rgb(32, 156, 1);
+    border: none;
+    padding: 20px;
+    cursor: pointer;
+    font-size: 30px;
+
+}
+
+.checkMark-btn {
+    background:white;
+}
+
+.garbage-btn:hover, .checkMark-btn:hover {
+        background: #ff427b;
+        color: rgb(32, 156, 1)
+    }
+    
+.fa-trash, .fa-check{
+    pointer-events: none;
+}
+
+.finito {
+    text-decoration: line-through;
+    opacity: 1;
+
+}
+
+.cascade {
+    transform: translateY(50px) rotateZ(20deg);
+    opacity: 0;
+}
