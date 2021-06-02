@@ -101,11 +101,49 @@ form button:hover {
 
 .finito {
     text-decoration: line-through;
-    opacity: 1;
-
+    opacity: 0.5;
+ 
 }
 
 .cascade {
     transform: translateY(50px) rotateZ(20deg);
-    opacity: 0;
+    opacity: 1;
+    transition: all 1 ease;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border:none;
+}
+
+.select {
+    margin: 0.5em;
+    position: relative;
+    overflow: hidden;
+}
+
+select {
+    color:rgb(32, 156, 1);
+    width: 10rem;
+    cursor:pointer;
+    padding: 1rem;
+   
+}
+
+.select::after {
+    content: '\25BC';
+    position: absolute;
+    background: rgb(32, 156, 1);
+    top: 0;
+    right: 0;
+    padding:1rem;
+    pointer-events: none;
+}
+
+.select:hover::after{
+    background: #ff427b;
+    color:rgb(32, 156, 1);
 }

@@ -2,11 +2,12 @@
 const toDoInput = document.querySelector('.todo-input');
 const toDoButton = document.querySelector('.todo-button');
 const toDoList = document.querySelector('.todo-list');
-
+const filterOption = document.querySelector('.filter-todo');
 
 // event listeners 
 toDoButton.addEventListener('click', addToDo);
 toDoList.addEventListener('click', deleteTask);
+filterOption.addEventListener('click', filterToDo);
 
 // functions
 function addToDo (event) {
@@ -65,6 +66,31 @@ function deleteTask(e) {
         todo.classList.toggle('finito')
     }
 }
-// Create an empty array to store tasks 
 
-// let toDoTasks = [];
+// fileter the to dos 
+
+function filterToDo(e) {
+    const todos = toDoList.childNodes;
+    console.log(todos);
+    todos.forEach(function(todo){
+        switch(e.target.value){
+            case 'all':
+                todo.style.display = 'flex';
+                break;
+            case 'finito':
+                if (todo.classList.contains('finito')){
+                    todo.style.display = 'flex';
+                }else{
+                    todo.style.display = 'none';
+                }
+                break;
+                case 'unfinished':
+                    if(!todo.classList.contains('finito')){
+                    todo.style.display = 'flex';
+                }else{
+                    todo.style.display = 'none';     
+                }
+                break;
+    };
+})
+};
